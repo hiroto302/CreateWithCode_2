@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    int _spawnRangeX = 20;
+    int _spawnRangeX = 11;
     int _spawnRangeZ = 20;
     public GameObject[] animals = new GameObject[3];
 
