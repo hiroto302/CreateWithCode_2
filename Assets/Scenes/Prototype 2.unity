@@ -386,7 +386,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 45
-  orthographic: 0
+  orthographic: 1
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -719,11 +719,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 716669982027026629, guid: 6559146b07c1e4f468ced3a084506082,
-        type: 3}
-      propertyPath: _speed
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6559146b07c1e4f468ced3a084506082, type: 3}
 --- !u!1001 &2747775883018903552
@@ -733,10 +728,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1241683490, guid: 2135c827bbbc94562ae8d99b795f54be, type: 3}
-      propertyPath: _speed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2747775882112841249, guid: 2135c827bbbc94562ae8d99b795f54be,
         type: 3}
       propertyPath: m_Name
@@ -806,10 +797,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1713013255, guid: 8d6f36b0556da4b929d785add16a826d, type: 3}
-      propertyPath: _speed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8457741286345681147, guid: 8d6f36b0556da4b929d785add16a826d,
         type: 3}
       propertyPath: m_Name
