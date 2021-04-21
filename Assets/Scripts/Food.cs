@@ -11,8 +11,9 @@ public class Food : MonoBehaviour
     void Update()
     {
         MoveForward();
-        DestroyOutOfBounds();
+        Hide();
     }
+
 
     void MoveForward()
     {
@@ -24,6 +25,14 @@ public class Food : MonoBehaviour
         if(transform.position.z > _topBound)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+    void Hide()
+    {
+        if(transform.position.z > _topBound)
+        {
+            this.gameObject.SetActive(false);
         }
     }
 }

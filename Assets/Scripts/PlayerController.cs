@@ -8,13 +8,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
     public float xRange = 10.0f;
 
-    public GameObject food;
-    void Start()
-    {
-        
-    }
+    // public GameObject food;
 
-    // Update is called once per frame
     void Update()
     {
         ResetPosition();
@@ -25,7 +20,6 @@ public class PlayerController : MonoBehaviour
             LaunchFood();
         }
     }
-
 
     void MoveHorizontal()
     {
@@ -63,6 +57,8 @@ public class PlayerController : MonoBehaviour
     // Launch a projectile from the player
     void LaunchFood()
     {
-        Instantiate(food, transform.position, Quaternion.identity);
+        // Instantiate(food, transform.position, Quaternion.identity);
+        GameObject requestFood =  FoodManager.Instance.RequestFood();
+        requestFood.transform.position = transform.position;
     }
 }

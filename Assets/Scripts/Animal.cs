@@ -18,7 +18,8 @@ public class Animal : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Destroy(this.gameObject);
-        Destroy(other.gameObject);
+        other.gameObject.SetActive(false);
+        // Destroy(other.gameObject);
     }
     void MoveForward()
     {
