@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
 
     void MoveHorizontal()
     {
+        /*
+        The Translate method essentially drags the object through the scene at a particular speed
+        regardless of any laws of physics or how heavy it is.
+        */
         _horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * _horizontalInput);
     }
