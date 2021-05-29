@@ -17,9 +17,9 @@ public class SpawnManager : MonoBehaviour
     {
         // Invokes the method methodName in time seconds, then repeatedly every repeatRate seconds.
         InvokeRepeating("SpawnAnimalToTop", _startDelay, _spawnIntervel);
-        // InvokeRepeating("SpawnAnimalToLeftSide", _startDelay, 2.0f);
-        // InvokeRepeating("SpawnAnimalToRightSide", _startDelay, 2.0f);
-    }
+        InvokeRepeating("SpawnAnimalToLeftSide", _startDelay, 2.0f);
+        InvokeRepeating("SpawnAnimalToRightSide", _startDelay, 2.0f);
+    }   
 
     // 画面の上部から animal を生み出すメソッド
     void SpawnAnimalToTop()
