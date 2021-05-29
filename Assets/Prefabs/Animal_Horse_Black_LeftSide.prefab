@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 5580827903845672468}
   m_Layer: 0
   m_Name: Animal_Horse_Black_LeftSide
-  m_TagString: Untagged
+  m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

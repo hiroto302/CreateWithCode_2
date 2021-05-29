@@ -18,6 +18,7 @@ public class SpawnedAnimalFromRightSide : MonoBehaviour
     {
         Destroy(this.gameObject);
         other.gameObject.SetActive(false);
+        PlayerController.score ++;
     }
     void MoveForward()
     {
@@ -28,6 +29,7 @@ public class SpawnedAnimalFromRightSide : MonoBehaviour
         if(transform.position.x > _lowBound)
         {
             Destroy(this.gameObject);
+            PlayerController.lives --;
         }
     }
 }

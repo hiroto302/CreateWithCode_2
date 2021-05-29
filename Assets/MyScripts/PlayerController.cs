@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,7 +14,17 @@ public class PlayerController : MonoBehaviour
     public float zRangeTop = 12.0f;
     public float zRangeBottom = -2.0f;
 
+    // Playerの体力
+    public static int  lives = 3;
+    // Player が保持してる Score
+    public static int score = 0;
+
     // public GameObject food;
+
+    // 体力とスコアが変化した時発生する event
+    public static event Action OnLivesChange;
+    public static event Action OnScoreChange;
+    public static event Action GameOver;
 
     void Update()
     {
@@ -24,6 +35,15 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             LaunchFood();
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        // animal と 衝突した時の処理
+        if(other.CompareTag("Animal"))
+        {
+            DecreaseLives();
         }
     }
 
@@ -80,7 +100,24 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, zRangeBottom);
         }
+    }
 
+    // 体力を減らすメソッド
+    public static void DecreaseLives()
+    {
+        lives --;
+        OnLivesChange();
+        if(lives <= 0)
+        {
+            GameOver();
+        }
+    }
+
+    // スコアーを更新するメソッド
+    public static void UpdateScore()
+    {
+        score ++;
+        OnScoreChange();
     }
 
     // Launch a projectile from the player

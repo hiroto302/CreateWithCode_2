@@ -19,6 +19,8 @@ public class Animal : MonoBehaviour
     {
         Destroy(this.gameObject);
         other.gameObject.SetActive(false);
+        // Playerのスコアをあげる
+        PlayerController.UpdateScore();
         // Destroy(other.gameObject);
     }
     void MoveForward()
@@ -27,9 +29,13 @@ public class Animal : MonoBehaviour
     }
     void DestroyOutOfBounds()
     {
+        // 範囲外に達した時の処理
         if(transform.position.z < _lowBound)
         {
             Destroy(this.gameObject);
+            // PlayerのLives を減少させる
+            PlayerController.DecreaseLives();
+
             // Debug.Log("game over");
         }
     }
