@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animal : MonoBehaviour
+public class SpawnedAnimalFromRightSide : MonoBehaviour
 {
     [SerializeField]
     float _speed = 10.0f;
-    float _lowBound = -10.0f;
-
+    float _lowBound = 25.0f;
 
     void Update()
     {
@@ -19,7 +18,6 @@ public class Animal : MonoBehaviour
     {
         Destroy(this.gameObject);
         other.gameObject.SetActive(false);
-        // Destroy(other.gameObject);
     }
     void MoveForward()
     {
@@ -27,10 +25,9 @@ public class Animal : MonoBehaviour
     }
     void DestroyOutOfBounds()
     {
-        if(transform.position.z < _lowBound)
+        if(transform.position.x > _lowBound)
         {
             Destroy(this.gameObject);
-            // Debug.Log("game over");
         }
     }
 }
