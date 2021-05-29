@@ -5,8 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     float _horizontalInput;
+    float _verticalInput;
+
     public float speed = 10.0f;
     public float xRange = 10.0f;
+
+    public float zRangeTop = 12.0f;
+    public float zRangeBottom = -2.0f;
 
     // public GameObject food;
 
@@ -14,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         ResetPosition();
         MoveHorizontal();
+        MoveVertical();
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -21,6 +27,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // 横移動
     void MoveHorizontal()
     {
         /*
@@ -29,6 +36,13 @@ public class PlayerController : MonoBehaviour
         */
         _horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * Time.deltaTime * speed * _horizontalInput);
+    }
+
+    // 縦移動
+    void MoveVertical()
+    {
+        _verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * _verticalInput);
     }
 
     void ResetPosition()
@@ -56,6 +70,17 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
+
+        // Z 方向の行動範囲制限
+        if(transform.position.z > zRangeTop)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRangeTop);
+        }
+        if(transform.position.z < zRangeBottom)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRangeBottom);
+        }
+
     }
 
     // Launch a projectile from the player
