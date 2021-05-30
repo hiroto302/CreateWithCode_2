@@ -890,11 +890,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog_Beagle_01
       objectReference: {fileID: 0}
-    - target: {fileID: 696299255071548932, guid: 6559146b07c1e4f468ced3a084506082,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 696299255071895378, guid: 6559146b07c1e4f468ced3a084506082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -953,12 +948,12 @@ PrefabInstance:
     - target: {fileID: 2592501157323103557, guid: 6559146b07c1e4f468ced3a084506082,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7623486187255861353, guid: 6559146b07c1e4f468ced3a084506082,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6559146b07c1e4f468ced3a084506082, type: 3}
@@ -1119,21 +1114,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 571512294, guid: 2135c827bbbc94562ae8d99b795f54be, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1337826134, guid: 2135c827bbbc94562ae8d99b795f54be, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2747775882112841249, guid: 2135c827bbbc94562ae8d99b795f54be,
         type: 3}
       propertyPath: m_Name
       value: Animal_Moose_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 2747775882112841249, guid: 2135c827bbbc94562ae8d99b795f54be,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2747775882113081427, guid: 2135c827bbbc94562ae8d99b795f54be,
         type: 3}
@@ -1423,21 +1413,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 361418387, guid: 8d6f36b0556da4b929d785add16a826d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1201955015, guid: 8d6f36b0556da4b929d785add16a826d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8457741286345681147, guid: 8d6f36b0556da4b929d785add16a826d,
         type: 3}
       propertyPath: m_Name
       value: Animal_Cow_White
-      objectReference: {fileID: 0}
-    - target: {fileID: 8457741286345681147, guid: 8d6f36b0556da4b929d785add16a826d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8457741286345924311, guid: 8d6f36b0556da4b929d785add16a826d,
         type: 3}
